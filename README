@@ -1,27 +1,29 @@
-########## What is CART ?
-CART is a software that retrieves biological annotations of chemical sets and computes which are enriched. In a nutshell, the input consists in a list of chemical names and the output is a table of enriched biological terms that are associated to these chemical names. CART consists of three modules: Name Matching, Enrichment, Visualization. 
-########## How to use it ?
+########## What is CART?
+CART is a software that retrieves biological annotations of chemical sets and identifies enriched annotations to reveal functional themes. In a nutshell, the input consists in a list of chemical names and the output is a table of enriched biological terms that are associated to these chemical names which is additionally displayed as a network. CART's workflow consists of three modules: Name Matching, Enrichment, Visualization (plus optional modules such as synonym retrieval). 
+
+########## How to use it?
 In order to retrieve the enriched biological terms of a list of chemical names, you can either: 
 
 1-Run everything at once
 2-Run it step by step
 
-########## OPTIONAL : if you have installed cart using the automatic installer, then activate the cart python virtual environment:
+########## OPTIONAL: if you have installed cart using the automatic installer, then activate the cart python virtual environment:
 source ~/cart-virtualenv/bin/activate/
 ########## 1- Run everything at once
 cd ${CART_INSTALLATION_DIRECTORY}/run-all-at-once/
 Open the file run-all-at-once.sh
 Set the arguments of your choice.
-NB : you need to specify at least your foreground (argument fn_fg)
+
+Note that you need to specify at least your foreground (argument fn_fg)
 The other parameters relative to each step are optional and can be set by the user.
-The document tutorial.pdf contains the full list of these paremeters, including a description and values they can hold.
-The document tutorial.pdf is available under ${CART_INSTALLATION_DIRECTORY} or online at http://det.embl.de/static/tutorial-command-line.docx
+The document tutorial.pdf contains the full list of these paremeters, including a description and values they can take.
+The document tutorial.pdf is available under ${CART_INSTALLATION_DIRECTORY} or online at http://cart.embl.de/static/tutorial-command-line.docx
 
 ########## 2- Run step by step
 cd ${CART_INSTALLATION_DIRECTORY}
-${description_file}=${CART_INSTALLATION_DIRECTORY}/static/all-drug-description_ver2.txt
+${description_file}=${CART_INSTALLATION_DIRECTORY}/static/all-drug-description_ver3.txt
 ${header_js}=${CART_INSTALLATION_DIRECTORY}/static/header_js.js
-${footer_js}=${CART_INSTALLATION_DIRECTORY}/static/footer_js.hs
+${footer_js}=${CART_INSTALLATION_DIRECTORY}/static/footer.js
 
 ### Match chemical names
 python src/name_matching.py -n  cmap_foreground_codim2.tsv -o nm_out_foreground.tsv -a true -e true;
@@ -43,7 +45,7 @@ python src/name_matching.py -n  cmap_foreground_codim2.tsv -o nm_out_foreground_
 Foreground: The set of chemicals on which enrichments will be computed
 Background: The set of chemicals used by the fisher-test during the enrichment computation
 CID: A chemical ID as found in one of the chemical universe
-Chemical universe: Set of chemical names associated to CIDs. We use two chemical universe : Stitch and Pubchem
+Chemical universe: Set of chemical names associated to CIDs. We use two chemical universe: Stitch and Pubchem
 Database: Database used during the enrichment step. Each database contains specific biological terms associated to different chemicals
-${CART_INSTALLATION_DIRECTORY} : CART installation directory
+${CART_INSTALLATION_DIRECTORY}: CART installation directory
 
