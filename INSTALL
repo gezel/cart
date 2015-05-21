@@ -1,0 +1,45 @@
+#############
+#PRE-REQUISITE 1: Python version 2.7x
+#PRE-REQUISITE 2: Python modules: matplotlib,scipy,pandas,numpy,statsmodel,psutil,networkx
+#PRE-REQUISITE 3: Java version 1.6 or higher
+##############
+
+######
+###### Manual Installation
+######
+
+1- Download CART and unpack it (http://cart.embl.de/static/cart.tar.gz)
+    -->This is your CART_INSTALLATAION_PATH (for instance /home/Downloads/cart/)
+
+2- Download Solr and unpack it (https://vm-lux.embl.de/~deghou/data/drug-enrichment-tool/new-09.01.2015/solr.tar.gz)
+    -->This is your SOLR_INSTALLATAION_PATH (for instance /home/Downloads/solr/)
+
+3- Open /home/Downloads/cart/conf/settings.cfg
+    Set the following path (given CART_INSTALLATION_PATH and SOLR_INSTALLATION_PATH):
+       solr_install_dir = /home/Downloads/solr/solr
+       jre_cmd = /usr/bin/java
+       description_file = /home/Downloads/cart/static/all-drug-description-ver3.txt
+       header_js1 = /home/Downloads/cart/static/header_1.js
+       header_js2 = /home/Downloads/cart/static/header_2.js
+       footer_js = /home/Downloads/cart/static/footer_js.js
+       db_dir = /home/Downloads/cart/databases
+
+4- Run test file
+    cd /home/Downloads/cart/test
+    bash RUN_EXAMPLE.sh
+
+
+######
+###### Automatic Installation
+######
+
+Download the file http://cart.embl.de/static/automatic-installer.sh 
+Execute it like this : source automatic-installer.sh
+
+
+IMPORTANT: the automatic installer will create a python virtual-environment in which the libraries mentioned in PRE-REQUISITE 2
+will be installed.
+The virtual-environment will be installed under this directory : ~/.cart-virtualenv/
+Before you use cart, you need to activate this virtual environment : `source ~/.cart-virtualvenv/bin/activate`
+To deactivate it : `deactive`
+

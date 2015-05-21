@@ -1,0 +1,44 @@
+######## You are using the automatic installer
+The automatic installer will :
+	1-Check your python version (has to be 2.7.x)
+	2-Check your java version (has to be 1.6 or higher)
+	3-Create a python virtual environment
+	4-Activate it
+	5-Install the following libraries:
+		statsmodels (will automatically install scipy,pandas, and numpy)
+  	  	psutil
+		networkx
+  		matplotlib
+	6-Download and unzip the chemical universe
+	7-Setup the configuration file (/path/to/cart/conf/settings.cfg)
+
+If for some reason the automatic installer is not working, perform these step manually
+
+######## You are installing CART manually
+
+##############
+############## Fedora / Centos / Ubuntu
+##############
+If you encounter any problem during the installation of the above-mentioned python packages,
+make sure that you have the following commands/libraries:
+
+yum update
+yum install wget
+yum install gcc
+yum install gcc-c++
+yum install gcc-gfortran
+yum install freetype-devel
+yum install blas-devel
+yum install lapack-devel
+yum install python-devel
+yum install libpng-devel
+
+
+##############
+############## Ubuntu 13.04
+##############
+Make sure that your python version has been compiled with SSL support
+
+
+
+
