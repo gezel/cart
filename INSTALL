@@ -21,7 +21,7 @@
        description_file = /home/Downloads/cart/static/all-drug-description-ver3.txt
        header_js1 = /home/Downloads/cart/static/header_1.js
        header_js2 = /home/Downloads/cart/static/header_2.js
-       footer_js = /home/Downloads/cart/static/footer_js.js
+       footer_js = /home/Downloads/cart/static/footer.js
        db_dir = /home/Downloads/cart/databases
 
 4- Run test file
@@ -34,12 +34,12 @@
 ######
 
 Download the file http://cart.embl.de/static/automatic-installer.sh 
-Execute it like this : source automatic-installer.sh
+Execute it like this: source automatic-installer.sh
 
 
 IMPORTANT: the automatic installer will create a python virtual-environment in which the libraries mentioned in PRE-REQUISITE 2
 will be installed.
-The virtual-environment will be installed under this directory : ~/.cart-virtualenv/
-Before you use cart, you need to activate this virtual environment : `source ~/.cart-virtualvenv/bin/activate`
-To deactivate it : `deactive`
+The virtual-environment will be installed under this directory: ~/.cart-virtualenv/
+Before you use cart, you need to activate this virtual environment: `source ~/.cart-virtualvenv/bin/activate`
+To deactivate it: `deactive`
 
