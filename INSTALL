@@ -1,7 +1,7 @@
 #############
-#PRE-REQUISITE 1: Python version 2.7x
-#PRE-REQUISITE 2: Python modules: matplotlib,scipy,pandas,numpy,statsmodel,psutil,networkx
-#PRE-REQUISITE 3: Java version 1.6 or higher
+#PREREQUISITE 1: Python version 2.7x
+#PREREQUISITE 2: Python modules: numpy,scipy,matplotlib,pandas,statsmodel,psutil,networkx
+#PREREQUISITE 3: Java version 1.6 or higher
 ##############
 
 ######
@@ -11,7 +11,7 @@
 1- Download CART and unpack it (http://cart.embl.de/static/cart.tar.gz)
     -->This is your CART_INSTALLATAION_PATH (for instance /home/Downloads/cart/)
 
-2- Download Solr and unpack it (https://vm-lux.embl.de/~deghou/data/drug-enrichment-tool/new-09.01.2015/solr.tar.gz)
+2- Download Solr and unpack it (http://cart.embl.de/static/solr.tar.gz)
     -->This is your SOLR_INSTALLATAION_PATH (for instance /home/Downloads/solr/)
 
 3- Open /home/Downloads/cart/conf/settings.cfg
@@ -21,7 +21,7 @@
        description_file = /home/Downloads/cart/static/all-drug-description-ver3.txt
        header_js1 = /home/Downloads/cart/static/header_1.js
        header_js2 = /home/Downloads/cart/static/header_2.js
-       footer_js = /home/Downloads/cart/static/footer.js
+       footer_js = /home/Downloads/cart/static/footer_js.js
        db_dir = /home/Downloads/cart/databases
 
 4- Run test file
@@ -37,9 +37,12 @@ Download the file http://cart.embl.de/static/automatic-installer.sh
 Execute it like this: source automatic-installer.sh
 
 
-IMPORTANT: the automatic installer will create a python virtual-environment in which the libraries mentioned in PRE-REQUISITE 2
-will be installed.
-The virtual-environment will be installed under this directory: ~/.cart-virtualenv/
-Before you use cart, you need to activate this virtual environment: `source ~/.cart-virtualvenv/bin/activate`
-To deactivate it: `deactive`
+IMPORTANT: the automatic installer will create a python
+virtual-environment in which the libraries mentioned in PREREQUISITE 2
+will be installed.  The virtual-environment will be installed under
+this directory: ~/.cart-virtualenv/
+Before you use cart, you need to activate this virtual environment:
+`source ~/.cart-virtualvenv/bin/activate`
+To deactivate it:
+`deactive`
 
